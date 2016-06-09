@@ -6,30 +6,30 @@
 </head>
 <body>
   <div class="run-stats">
-  
     <ul>
       <li>
-          Distance: 
+          Distance:
           <input type="text" id="distanceInput" placeholder="miles">
+          <input type="range" min="0" max="100" value="20" step="10">
       </li>
-      
+
       <li>
-          Time: 
-          <input type="text" id="hoursInput" placeholder="hours"> <input type="text" id="minutesInput" placeholder="minutes"> 
+          Time:
+          <input type="text" id="hoursInput" placeholder="hours">
+          <input type="text" id="minutesInput" placeholder="minutes">
           <input type="text" id="secondsInput" placeholder="seconds">
+          <input type="range" min="0" max="7800" value="3600" step="15">
       </li>
     </ul>
-    
+
     <button id="calculateButton">Calculate Pace</button>
   </div>
-  
+
   <div class="output">
     <p id="pace" />
-  </div>  
-  
-  
- <!--javascript-->
-  
+  </div>
+
+  <!--javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
