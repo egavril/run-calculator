@@ -1,11 +1,13 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Running Calculator</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css"/>    
 </head>
 <body>
   <div class="run-stats">
+<<<<<<< d2cb448b01c630333b0cef25a60dfd9877c87fee
     <ul>
       <li>
           Distance:
@@ -21,14 +23,40 @@
           <input type="range" min="0" max="7800" value="3600" step="15">
       </li>
     </ul>
+=======
+
+      <section class="distance">
+          <h2>Distance</h2>
+          <input type="text" id="distanceInput" placeholder="miles">
+          <br />
+          <input type="range" id="distance_slider" min="0" max="100" value="20" step="1" oninput="distanceSliderOutput(value)">
+      </section>
+
+      <section class="time">
+          <h2>Time</h2>
+          <input type="text" id="hoursInput" placeholder="hours">
+          <input type="text" id="minutesInput" placeholder="minutes">
+          <input type="text" id="secondsInput" placeholder="seconds">
+          <br />
+          <input type="range" id="time_slider" min="0" max="7800" value="3600" step="15" oninput="timeSliderOutput(value)">
+      </section>
+
+      <section class="pace">
+          <h2>Pace</h2>
+          <input type="text" id="paceInput" placeholder="mins/mile">
+      </section>
+>>>>>>> added sliders
 
     <button id="calculateButton">Calculate Pace</button>
   </div>
 
+<<<<<<< d2cb448b01c630333b0cef25a60dfd9877c87fee
   <div class="output">
     <p id="pace" />
   </div>
 
+=======
+>>>>>>> added sliders
   <!--javascript-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>

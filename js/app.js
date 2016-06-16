@@ -6,6 +6,22 @@ var calculateButton = document.getElementById('calculateButton');
 var paceOutput = document.getElementById('pace');
 
 
+function distanceSliderOutput(dist) {
+	document.querySelector('#distanceInput').value = dist;
+}
+
+function timeSliderOutput(time) {
+	var secondsFromSlider = document.querySelector('#secondsInput').value = time;
+	if (secondsFromSlider > 59 || secondsFromSlider < 3599) {
+		document.querySelector('#minutesInput').value = document.querySelector('#secondsInput').value / 60;
+	}
+	if (secondsFromSlider > 3599) {
+		document.querySelector('#hoursInput').value = document.querySelector('#minutesInput').value / 60;
+	}
+
+	console.log(secondsFromSlider);
+}
+
 calculateButton.addEventListener('click', function() {
   
 	//convert input strings to number values
@@ -26,8 +42,7 @@ calculateButton.addEventListener('click', function() {
 		paceSeconds = '0' + paceSeconds;
 	}
 	
-	paceOutput.innerHTML = 'You need to run ' + 
-			paceMinutes + ':' + paceSeconds + ' minutes per mile';
+	return paceInput.value = paceMinutes + ':' + paceSeconds;
 
   
 });

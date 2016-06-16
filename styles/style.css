@@ -1,14 +1,28 @@
-.fields {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+html {
+ 	box-sizing: border-box;
 }
 
-.distance {
-  padding-top: 1em;
+body {
+	background-color: white;
+	font-family: sans-serif;
 }
 
-.time {
+.run-stats {
+	margin: 0 auto;
+	text-align: center;
+	padding-top:5rem;
+}
+
+.run-stats ul {
+	list-style-type: none;
+}
+
+.run-stats h2 {
+	padding: 2rem 0 2rem 0;
+	font-size: 24px;
+}
+
+.distance, .pace, .time {
   padding-top: 1em;
 }
 
@@ -17,9 +31,33 @@
 }
 
 #calculateButton {
-  margin-top: 1em;
+  margin-top: 2rem;
 }
 
 #paceOutput {
   padding-right: .08rem;
+}
+
+#distance_slider, #time_slider {
+	margin-top: 1rem;
+}
+
+/* sliders */
+
+input[type=range] {
+	-webkit-appearance: none;
+	background-color: #7fd3f3;
+	width: 600px;
+	height:20px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background-color: #00435c;
+	width: 6px;
+	height: 20px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background-color: #72bdda;
 }
